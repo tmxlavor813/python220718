@@ -20,3 +20,13 @@ def union(*ar):
 #호출
 print(union("HAM", "EGG"))
 print(union("HAM","EGG", "SPAM"))
+
+def userURIBuilder(server, port, **user):
+    strURL = "http://" + server + ":" + port + "/?"
+    for key in user.keys():
+        strURL += key + "=" + user[key] + "&"
+    return strURL
+
+#호출
+print(userURIBuilder("credu.com", "80", id="kim", passwd="1234"))
+print(userURIBuilder("credu.com", "80", id="kim", passwd="1234", name="mike"))
