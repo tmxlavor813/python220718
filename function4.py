@@ -1,5 +1,8 @@
 #function4.py
 #기본값을 셋팅
+from tkinter import Y
+
+
 def times(a=10,b=20):
     return a*b
 
@@ -30,3 +33,10 @@ def userURIBuilder(server, port, **user):
 #호출
 print(userURIBuilder("credu.com", "80", id="kim", passwd="1234"))
 print(userURIBuilder("credu.com", "80", id="kim", passwd="1234", name="mike"))
+
+
+#람다함수
+g= lambda x,y:x*y
+print(g(3,4))
+print((lambda x:x*x)(3))
+print(globals())
