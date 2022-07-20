@@ -24,7 +24,7 @@ f = open("demo.txt", "wt")
 f.write("첫번쩨\n두번째\n세번째\n")
 f.close()
 
-f.open("demo.txt", "rt")
+f = open("demo.txt", "rt")
 result = f.read()
 print(result)
 f.close()
