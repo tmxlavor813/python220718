@@ -6,7 +6,7 @@ def divide(a,b):
 #에러 처리
 try:
     #호출
-    result = dvide(5,0)
+    result = dvide(5,2)
 except ZeroDivisionError:
     print("0으로 나누면 안됩니다.")
 except TypeError:
