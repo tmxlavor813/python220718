@@ -1,7 +1,7 @@
 import re 
 
-f=open('c:\\work\\PV3.txt','rt')
-g=open('c:\\work\\PV3_copy.txt','wt',encoding='utf-8')
+f=open('/Users/iyun-il/Desktop/work/PV3.txt','rt',encoding='utf-8')
+g=open('/Users/iyun-il/Desktop/work/PV3_copy.txt','wt',encoding='utf-8')
 
 #많은 라인의 파일이면 
 #한번에 한줄씩 읽어서 처리한다.  
