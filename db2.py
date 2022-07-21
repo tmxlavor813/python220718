@@ -1,8 +1,8 @@
-#db1.py
+#db2.py
 import sqlite3
 
-#연결객체 리턴(일단은 임시로 메모리에서 작업)
-con =sqlite3.connect(":memory:")
+#연결객체 리턴(데이터베이스 파일에 저장)
+con =sqlite3.connect("test.db")
 
 #커서  객체(SQL 구문을 실행하는 객체)
 cur = con.cursor()
@@ -16,6 +16,7 @@ phoneNumber = "010-222"
 
 cur.execute("insert into PhoneBook values (?, ?);",(name, phoneNumber))
 
+#다중의 데이터 입력(2차원 행렬)
 datalist = (("tom", "010-123"), ("dsp", "010-456"))
 cur.executemany("insert into PhoneBook values (?, ?);",datalist)
 
