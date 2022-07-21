@@ -5,7 +5,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 
 #네이버에서 실행한 페이지결과를 문자열로 받기 
-data = urllib.request.urlopen("http://comic.naver.com/webtoon/list.nhn?titleId=20853&weekday=fri")
+data = urllib.request.urlopen("https://comic.naver.com/webtoon/list.nhn?titleId=20853&weekday=fri")
 #검색이 용이한 객체 
 soup = BeautifulSoup(data, "html.parser")
 #특정한 태그를 검색
@@ -19,3 +19,8 @@ title = cartoons[0].find("a").text
 link = cartoons[0].find("a")["href"]
 print(title)
 print(link)
+
+for item in cartoons:
+    item2 = item.find("a")
+    title = item2.text.strip()
+    print(title)
